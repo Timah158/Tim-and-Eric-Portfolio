@@ -3,7 +3,7 @@
 import GithubIcon from "../../../public/JSX/Github.jsx";
 import LinkedInIcon from "../../../public/JSX/Linkedin.jsx"
 import THMIcon from "../../../public/JSX/THM.jsx"
-import EmailIcon from "../../../public/JSX/Email.jsx"
+// import EmailIcon from "../../../public/JSX/Email.jsx"
 import { Dispatch, SetStateAction, useState } from "react";
 import Link from 'next/link'
 import './footer.modules.css'
@@ -26,7 +26,7 @@ const TimFooter: React.FC<Props> = (props) => {
             <Link href="https://github.com/Timah158" rel='noreferrer' target="_blank"><GithubIcon className='footer_icon'/></Link>
             <Link href="https://www.linkedin.com/in/timlopez22" rel='noreferrer' target="_blank"><LinkedInIcon className='footer_icon'/></Link>
             <Link href="https://tryhackme.com/p/Timah158" rel='noreferrer' target="_blank"><THMIcon className='footer_icon'/></Link>
-            <EmailIcon className='footer_icon'/>
+            {/* <EmailIcon className='footer_icon'/> */}
           </div>
         </div>
     );

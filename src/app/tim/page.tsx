@@ -26,7 +26,7 @@ export default function TimProfile() {
           </div>
           <div id="main_title_buttons">
             <button className='main_button'>Contact</button>
-            <Link href="/api/download/timResume.docx" className='main_button'>Resume</Link>
+            <Link href="/api/download/timResume.pdf" className='main_button'>Resume</Link>
           </div>
         </section>
       </div>
