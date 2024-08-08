@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.section {
+    @apply min-h-[40vh] flex items-center justify-center;
+}
+
+.main_title {
+  @apply text-[2.5em] text-[color:var(--primary-color)];
+}
+
+section {
+  @apply w-[70vw] h-[90%] flex items-center m-[2vw];
+}
+
+.split {
+  @apply grid grid-cols-[auto_auto] gap-x-[5em];
+}
+
+.center {
+  @apply flex-col text-center w-[35vw];
+}
+
+.odd_section {
+  @apply bg-[color:var(--odd-section-color)];
+}
+
+h3 {
+  @apply text-3xl text-[color:var(--primary-color)];
+}
+
+ul {
+  @apply list-disc
+  list-inside;
+}
+
+p, ul {
+  @apply text-xl text-[color:var(--primary-font)];
+}
+
+#main_title_buttons {
+  @apply text-center;
+}
+
+.main_button {
+  @apply 
+  bg-[white] 
+  text-[color:var(--primary-color)] 
+  text-[25px] 
+  m-[1em] 
+  px-[2em] 
+  py-[0.75em] 
+  rounded-[0.5em] 
+  border-[none] 
+  hover:cursor-pointer hover:text-[color:var(--selected-color)];
+  outline: var(--primary-color) solid 2px;
+}
+
+.main_button:hover {
+  outline-color: var(--selected_color);
+}
+
+.section_image {
+  @apply w-[20vw] border-[color:var(--primary-color)] m-[2vw] border-2 border-solid;
+}

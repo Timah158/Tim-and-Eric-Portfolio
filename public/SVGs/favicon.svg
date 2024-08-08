@@ -1,0 +1,8 @@
+<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .heavy { font: bold 100px monospace;}
+  </style>
+
+  <circle id="navbar_logo_svg" cx="125" cy="125" r="100" stroke="none" stroke-width="8" fill="#4287f5"/>
+  <text x="125" y="135" class="heavy" dominant-baseline="middle" text-anchor="middle" fill="white">TE</text>
+</svg>

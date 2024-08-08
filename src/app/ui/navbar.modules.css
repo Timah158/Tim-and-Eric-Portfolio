@@ -1,0 +1,72 @@
+nav.navbar {
+  @apply w-[70vw] flex justify-between;
+}
+
+.navbar_logo {
+  @apply h-full my-auto;
+}
+
+ul.navlist {
+  @apply flex p-0;
+}
+
+li.navlink {
+  @apply flex;
+  list-style: none;
+}
+
+a.navlink, button.navlink {
+  @apply text-[color:var(--primary-color)] no-underline text-[25px] cursor-pointer px-[1em] py-[0.5em] border-[none];
+  background: none;
+}
+
+a.navlink:hover, button.navlink:hover {
+  @apply text-[color:var(--selected-color)];
+}
+
+.navbar_logo:hover > .logo_link, .navbar_logo:hover > .logo_circle {
+  @apply fill-[var(--selected-color)];
+}
+
+.menu_icon {
+  @apply flex items-center justify-center bg-[color:var(--primary-color)] mx-[5vw] my-0 border-[none] hover:bg-[color:var(--hover-color)];
+  outline: none;
+}
+
+.mobile_navbar_logo_link {
+  @apply mx-[5vw] my-0;
+}
+
+.menu_icon > svg, .mobile_navbar_logo {
+  @apply h-[3em] w-[3em];
+}
+
+.mobile_navbar {
+  @apply flex justify-center pt-[3em] pt-0 pb-[6em] hidden;
+}
+
+nav.mobile_navbar {
+  @apply fixed justify-between bg-[color:var(--primary-color)] w-screen px-0 py-[1em];
+}
+
+.mobile_navlist {
+  @apply flex w-screen h-screen flex flex-col fixed bg-[rgba(157,195,255,0.438)] items-end mt-[3.25em] border-t-2 border-t-[rgba(255,255,255,0.596)] border-solid;
+}
+
+li.mobile_navlink {
+  @apply flex w-screen bg-[color:var(--primary-color)] justify-center;
+}
+
+a.mobile_navlink_a, button.mobile_navlink_a {
+  @apply text-center w-full text-[25px] underline text-[white] px-0 py-[0.3em] border-[none];
+  background: none;
+}
+
+a.mobile_navlink_a:hover, button.mobile_navlink_a:hover {
+  @apply bg-[color:var(--hover-color)] cursor-pointer;
+}
+
+.white_space {
+  @apply h-full;
+  background: none !important;
+}

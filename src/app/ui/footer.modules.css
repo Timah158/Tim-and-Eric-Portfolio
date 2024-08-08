@@ -1,0 +1,32 @@
+footer {
+  @apply bg-[color:var(--footer-background-color)] overflow-hidden;
+}
+
+.footer_container {
+  @apply w-full flex flex-col justify-center items-center self-center pt-[1em];
+}
+
+.footer_icons {
+  @apply flex;
+}
+
+.footer_icon {
+  @apply h-[4em] fill-[white] m-[1em] hover:fill-[var(--footer-icon-hover)] cursor-pointer;
+}
+
+.footerlink, h4 {
+  @apply text-[25px] text-[white] no-underline bg-transparent px-[0.5em] py-0 border-[none];
+}
+
+.toggle_footer {
+  @apply flex;
+}
+
+.footer_button {
+    @apply bg-[color:transparent] p-0 border-[none];
+  outline: none;
+}
+
+.footer_button:hover > h4, .footerlink:hover {
+  @apply text-[color:var(--footer-icon-hover)] cursor-pointer;
+}
