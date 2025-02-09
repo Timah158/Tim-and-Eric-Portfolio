@@ -18,7 +18,7 @@ export default function Home() {
           <div id="main_title_buttons" className="text-center">
             <button className='main_button'>Contact</button>
             <Link href="#section_3" className='main_button'>About</Link>
-          </div>          
+          </div>
         </section>
       </div>
       <div id='section_2' className="section odd_section">

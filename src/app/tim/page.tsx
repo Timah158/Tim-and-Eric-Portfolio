@@ -41,9 +41,9 @@ export default function TimProfile() {
         <section className="center profile">
           <div>
             <h3>Certifications</h3>
-            <div data-iframe-width="150" 
-              data-iframe-height="270" 
-              data-share-badge-id="e83dab79-d868-479e-a72c-723389c90e71" 
+            <div data-iframe-width="150"
+              data-iframe-height="270"
+              data-share-badge-id="e83dab79-d868-479e-a72c-723389c90e71"
               data-share-badge-host="https://www.credly.com">
             </div>
             <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
