@@ -28,7 +28,7 @@ export default function Home() {
             <p>
               We are two industry professionals looking to showcase our skills and connect with employers.
               We hope that with this site we can properly demonstrate our skills and learn by doing. Our
-              specialties are full-stack developent, cybersecurity, and teamwork.
+              specialties are full-stack development, cybersecurity, and teamwork.
             </p>
           </div>
         </section>
