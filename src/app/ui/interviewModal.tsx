@@ -27,7 +27,6 @@ const INITIAL_INPUTS = {
 }
 
 export const InterviewModal: React.FC<Props> = (props) => {
-
   const [inputs, setInputs] = useState<Inputs>(INITIAL_INPUTS);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -103,7 +102,6 @@ export const InterviewModal: React.FC<Props> = (props) => {
           />
           <input type="submit" value="Submit" />
         </form>
-
       </div>
     </div>
   )
