@@ -15,21 +15,21 @@ export const InterviewModal: React.FC<Props> = (props) => {
             <h3>Schedule An Interview</h3>
             <form id='interview_form'>
                 <div id='interview_row1'>
-                  <input 
-                  type="date" 
+                  <input
+                  type="date"
                   name='date'
                   value=""
                   required
                   />
-                  <input 
-                  type="time" 
+                  <input
+                  type="time"
                   name='time'
                   value=""
                   required
                   />
-                  <select 
-                  name="person" 
-                  id="person" 
+                  <select
+                  name="person"
+                  id="person"
                   value=""
                   required
                   >
@@ -37,23 +37,23 @@ export const InterviewModal: React.FC<Props> = (props) => {
                     <option value="Tim">Tim</option>
                     <option value="Eric">Eric</option>
                   </select>
-                  <input 
-                  type="email" 
-                  placeholder='email@email.com' 
+                  <input
+                  type="email"
+                  placeholder='email@email.com'
                   name='email'
                   value=""
                   required
                   />
-                  <input 
-                  type="tel" 
-                  placeholder='888-888-8888' 
+                  <input
+                  type="tel"
+                  placeholder='888-888-8888'
                   name='phone'
                   value=""
                   required
                   />
                 </div>
-                <textarea 
-                placeholder='Tell us about your company...' 
+                <textarea
+                placeholder='Tell us about your company...'
                 name='about'
                 value=""
                 />

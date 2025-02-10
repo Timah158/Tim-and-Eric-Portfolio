@@ -18,7 +18,7 @@ export default function Home() {
           <div id="main_title_buttons" className="text-center">
             <button className='main_button'>Contact</button>
             <Link href="#section_3" className='main_button'>About</Link>
-          </div>          
+          </div>
         </section>
       </div>
       <div id='section_2' className="section odd_section">
@@ -28,7 +28,7 @@ export default function Home() {
             <p>
               We are two industry professionals looking to showcase our skills and connect with employers.
               We hope that with this site we can properly demonstrate our skills and learn by doing. Our
-              specialties are full-stack developent, cybersecurity, and teamwork.
+              specialties are full-stack development, cybersecurity, and teamwork.
             </p>
           </div>
         </section>
@@ -66,7 +66,7 @@ export default function Home() {
             <h3>About Eric</h3>
             <p>
               I am a full-stack web developer with experience in Spring Boot, Thymeleaf, Bootstrap, MySQL, PostgreSQL, and MongoDB.
-              I prefer working in Java, but I also have experience with other languages and webstacks such as .NET in C# and Django in Python.
+              I prefer working in Java, but I also have experience with other languages and web stacks such as .NET in C# and Django in Python.
               If you&apos;re looking for someone that has a passion for Object-Oriented design principles and scalable backend servers, I&apos;m your guy.
             </p>
             <br></br>
