@@ -50,24 +50,24 @@ export const InterviewModal: React.FC<Props> = (props) => {
             <h3>Schedule An Interview</h3>
                 <form id='interview_form' onSubmit={handleSubmit}>
                 <div id='interview_row1'>
-                  <input 
-                  type="Date" 
+                  <input
+                  type="Date"
                   name='Date'
-                  value={inputs.Date || ""} 
+                  value={inputs.Date || ""}
                   onChange={handleChange}
                   required
                   />
-                  <input 
-                  type="Time" 
+                  <input
+                  type="Time"
                   name='Time'
-                  value={inputs.Time || ""} 
+                  value={inputs.Time || ""}
                   onChange={handleChange}
                   required
                   />
-                  <select 
-                  name="Person" 
-                  id="Person" 
-                  value={inputs.Person || ""} 
+                  <select
+                  name="Person"
+                  id="Person"
+                  value={inputs.Person || ""}
                   onChange={handleChange}
                   required
                   >
@@ -75,25 +75,25 @@ export const InterviewModal: React.FC<Props> = (props) => {
                     <option value="Tim">Tim</option>
                     <option value="Eric">Eric</option>
                   </select>
-                  <input 
-                  type="Email" 
-                  placeholder='email@email.com' 
+                  <input
+                  type="Email"
+                  placeholder='email@email.com'
                   name='Email'
-                  value={inputs.Email || ""} 
+                  value={inputs.Email || ""}
                   onChange={handleChange}
                   required
                   />
-                  <input 
-                  type="tel" 
-                  placeholder='888-888-8888' 
+                  <input
+                  type="tel"
+                  placeholder='888-888-8888'
                   name='Phone'
-                  value={inputs.Phone || ""} 
+                  value={inputs.Phone || ""}
                   onChange={handleChange}
                   required
                   />
                 </div>
-                <textarea 
-                placeholder='Tell us about your company...' 
+                <textarea
+                placeholder='Tell us about your company...'
                 name='About'
                 value={inputs.About || ""}
                 onChange={handleChange}
