@@ -55,21 +55,21 @@ export const InterviewModal: React.FC<Props> = (props) => {
             <input
               type="Date"
               name='Date'
-              value={inputs.Date || ""}
+              value={inputs.Date}
               onChange={handleChange}
               required
             />
             <input
               type="Time"
               name='Time'
-              value={inputs.Time || ""}
+              value={inputs.Time}
               onChange={handleChange}
               required
             />
             <select
               name="Person"
               id="Person"
-              value={inputs.Person || ""}
+              value={inputs.Person}
               onChange={handleChange}
               required
             >
@@ -81,7 +81,7 @@ export const InterviewModal: React.FC<Props> = (props) => {
               type="Email"
               placeholder='email@email.com'
               name='Email'
-              value={inputs.Email || ""}
+              value={inputs.Email}
               onChange={handleChange}
               required
             />
@@ -89,7 +89,7 @@ export const InterviewModal: React.FC<Props> = (props) => {
               type="tel"
               placeholder='888-888-8888'
               name='Phone'
-              value={inputs.Phone || ""}
+              value={inputs.Phone}
               onChange={handleChange}
               required
             />
@@ -97,7 +97,7 @@ export const InterviewModal: React.FC<Props> = (props) => {
           <textarea
             placeholder='Tell us about your company...'
             name='About'
-            value={inputs.About || ""}
+            value={inputs.About}
             onChange={handleChange}
           />
           <input type="submit" value="Submit" />
