@@ -1,0 +1,86 @@
+.profile_picture {
+  height: 50%;
+  width: 50%;
+  border: 2px solid var(--primary-color);
+  margin-bottom: 3em;
+}
+
+.skills {
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.projectSection {
+  text-align: center;
+}
+
+#carouselWrapper {
+  width: 100%;
+}
+
+.projectsCarousel {
+  color: white;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto auto auto;
+  padding: 2vw 0;
+  text-shadow: 2px 2px var(--hover-color);
+  overflow-x: auto;
+  max-width: 650px;
+  margin: auto;
+}
+
+.carouselElement {
+  background-color: var(--primary-color);
+  border-radius: .5em;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1em;
+  padding: 1em;
+}
+
+.carouselElement:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+.projectTitle {
+  font-size: 25px;
+  min-height: max-content;
+  margin: auto;
+}
+
+.projectDescription {
+  min-height: max-content;
+  margin: auto
+  ;
+}
+
+.carouselPagination {
+  display: none;
+}
+
+.carouselButton {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--primary-color);
+  font-size: 45px;
+}
+
+.carouselButton:hover {
+  cursor: pointer;
+  background-color: var(--odd_section_color);
+  color: var(--selected_color);
+}
+
+@media screen and (max-width: 800px) {
+  .projectTitle {
+      font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1375px) {
+  .profile {
+      width: 75vw;
+  }
+}

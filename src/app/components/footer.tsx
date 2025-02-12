@@ -19,7 +19,7 @@ const TimFooter: React.FC<Props> = (props) => {
         <div className='footer_container'>
           <div className='toggle_footer'>
             <button className='footer_button' onClick={() => props.setToggleFooter(!props.toggleFooter)}><h4>&#60;</h4></button>
-            <Link className="footerlink" href="/tim"><b>Tim</b></Link>
+            <Link className="footer_link" href="/tim"><b>Tim</b></Link>
             <button className='footer_button' onClick={() => props.setToggleFooter(!props.toggleFooter)}><h4>&#62;</h4></button>
           </div>
           <div className='footer_icons'>
@@ -37,7 +37,7 @@ const TimFooter: React.FC<Props> = (props) => {
         <div className='footer_container'>
           <div className='toggle_footer'>
             <button className='footer_button' onClick={() => props.setToggleFooter(!props.toggleFooter)}><h4>&#60;</h4></button>
-            <Link className="footerlink" href="/eric"><b>Eric</b></Link>
+            <Link className="footer_link" href="/eric"><b>Eric</b></Link>
             <button className='footer_button' onClick={() => props.setToggleFooter(!props.toggleFooter)}><h4>&#62;</h4></button>
           </div>
           <div className='footer_icons'>

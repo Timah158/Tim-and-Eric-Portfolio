@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from './ui/navbar'
-import Footer from './ui/footer'
-import {Providers} from "./providers";
+import Navbar from '@/app/components/navbar'
+import Footer from '@/app/components/footer'
+import { ModalProvider } from "@/app/context/modalContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
+        <ModalProvider>
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
-        </Providers>
+        </ModalProvider>
       </body>
     </html>
   );

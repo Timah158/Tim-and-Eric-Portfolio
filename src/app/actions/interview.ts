@@ -11,6 +11,7 @@ export async function createNewInterview(formData: FormData) {
   const Phone = formData.get("Phone") as string;
   const About = formData.get("About") as string;
 
+  
   await sql(
     `INSERT INTO public."Interviews" (id, "Date", "Time", "Person", "Email", "Phone", "About") VALUES (gen_random_uuid(), $1, $2, $3, $4, $5, $6)`,
     [Date, Time, Person, Email, Phone, About]

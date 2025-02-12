@@ -1,67 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 .section {
-    @apply min-h-[40vh] flex items-center justify-center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main_title {
-  @apply text-[2.5em] text-[color:var(--primary-color)];
+  font-size: 2.5em;
+  color: var(--primary-color);
 }
 
 section {
-  @apply w-[70vw] h-[90%] flex items-center m-[2vw];
+  width: 70vw;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  margin: 2vw;
 }
 
 .split {
-  @apply grid grid-cols-[auto_auto] gap-x-[5em];
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 5em;
 }
 
 .center {
-  @apply flex-col text-center w-[35vw];
+  flex-direction: column;
+  text-align: center;
+  width: 35vw;
 }
 
 .odd_section {
-  @apply bg-[color:var(--odd-section-color)];
+  background-color: var(--odd_section_color);
 }
 
 h3 {
-  @apply text-3xl text-[color:var(--primary-color)];
+  font-size: 30px;
+  color: var(--primary-color);
 }
 
+p,
 ul {
-  @apply list-disc
-  list-inside;
-}
-
-p, ul {
-  @apply text-xl text-[color:var(--primary-font)];
+  font-size: 20px;
+  color: var(--primary-font);
 }
 
 #main_title_buttons {
-  @apply text-center;
+  text-align: center;
 }
 
 .main_button {
-  @apply 
-  bg-[white] 
-  text-[color:var(--primary-color)] 
-  text-[25px] 
-  m-[1em] 
-  px-[2em] 
-  py-[0.75em] 
-  rounded-[0.5em] 
-  border-[none] 
-  hover:cursor-pointer hover:text-[color:var(--selected-color)];
   outline: var(--primary-color) solid 2px;
+  background-color: white;
+  border: none;
+  border-radius: .5em;
+  color: var(--primary-color);
+  font-size: 25px;
+  padding: .75em 2em;
+  margin: 1em;
+  text-decoration: none;
 }
 
 .main_button:hover {
-  outline-color: var(--selected_color);
+  cursor: pointer;
+  outline: var(--selected_color) solid 2px;
+  color: var(--selected_color);
 }
 
 .section_image {
-  @apply w-[20vw] border-[color:var(--primary-color)] m-[2vw] border-2 border-solid;
+  width: 20vw;
+  border: 2px solid var(--primary-color);
+  margin: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+  section, .center {
+      width: 90vw;
+  }
+  .split {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+  ul {
+      display: none;
+  }
+  .main_button {
+      padding: .5em 1em;
+  }
+  .odd_section > section {
+      flex-direction: column-reverse !important;
+  }
+  .section_image {
+      width: 90vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section_image {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  #main_title_buttons > button {
+      font-size: 18px;
+  }
 }

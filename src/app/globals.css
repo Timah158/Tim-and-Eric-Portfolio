@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Ubuntu&family=Work+Sans&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --bg-color: white;
   --primary-color: #4287f5;
-  --selected-color: #f5b042;
+  --selected_color: #f5b042;
   --hover-color: hsl(217, 57%, 29%);
   --primary-font: #2b569c;
   --footer-background-color: #8DB5F7;
   --footer-icon-hover: #F7CF8D;
-  --odd-section-color: rgba(141, 181, 247, .2);
+  --odd_section_color: rgba(141, 181, 247, .2);
+  --error-color: #F55942;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Ubuntu&family=Work+Sans&display=swap');
+
+/* Box sizing rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Ubuntu', sans-serif;
 }
