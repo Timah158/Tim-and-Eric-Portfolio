@@ -86,11 +86,11 @@ function MobileDropdown({ setShowDropdown }: MobileDropdownProps) {
 }
 
 function Navbar() {
-  const { toggleModal } = useModal();
+  const { toggleModal , updateModal} = useModal();
 
   return (
     <React.Fragment>
-      {toggleModal && <InterviewModal />}
+      {toggleModal && <InterviewModal updateModal={updateModal} toggleModal={toggleModal}/>}
       <MobileNavbar />
       <DesktopNavbar />
     </React.Fragment>

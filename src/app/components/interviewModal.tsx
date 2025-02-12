@@ -7,7 +7,7 @@ import './interview.modules.css'
 
 interface Props {
   toggleModal: boolean,
-  updateModal: Dispatch<SetStateAction<boolean>>
+  updateModal: (value: boolean) => void;
 }
 
 interface Inputs {
@@ -27,7 +27,7 @@ const INITIAL_INPUTS = {
   Phone: "",
 }
 
-export const InterviewModal: React.FC<Props> = (props) => {
+export const InterviewModal: React.FC<Props> = ({ updateModal, toggleModal }: Props) => {
   const [inputs, setInputs] = useState<Inputs>(INITIAL_INPUTS);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -48,7 +48,7 @@ export const InterviewModal: React.FC<Props> = (props) => {
   return (
     <div className='modal_wrapper'>
         <div className='modal_content'>
-            <CloseIcon className='close_button' onClick={() => props.updateModal(!props.toggleModal)}/>
+            <CloseIcon className='close_button' onClick={() => updateModal(!toggleModal)}/>
             <h3>Schedule An Interview</h3>
                 <form id='interview_form' onSubmit={handleSubmit}>
                 <div id='interview_row1'>
