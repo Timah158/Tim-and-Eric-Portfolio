@@ -25,14 +25,16 @@ export const InterviewModal: React.FC<Props> = () => {
   const [errorVisible, setErrorVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const [inputs, setInputs] = useState<Inputs>({
-    Date: "",
-    Time: "",
-    Person: "",
-    Email: "",
-    Phone: "",
-    About: "",
-  });
+const INITIAL_INPUTS = {
+  Date: "",
+  Time: "",
+  Person: "",
+  Email: "",
+  Phone: "",
+}
+
+export const InterviewModal: React.FC<Props> = (props) => {
+  const [inputs, setInputs] = useState<Inputs>(INITIAL_INPUTS);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = event.target;
