@@ -1,7 +1,9 @@
+"use client";
+
 import CloseIcon from "../../../public/JSX/CloseIcon.jsx";
 import { Dispatch, SetStateAction, FormEvent, ChangeEvent, useState} from "react";
-import { neon } from '@neondatabase/serverless';
 import { createNewInterview } from "@/app/actions/interview";
+import { useModal } from "@/app/context/modalContext";
 import './interview.modules.css'
 
 interface Props {
@@ -17,7 +19,11 @@ interface Inputs {
   Phone: string;
   About?: string;
 }
-export const InterviewModal: React.FC<Props> = (props) => {
+export const InterviewModal: React.FC<Props> = () => {
+
+  const { toggleModal, updateModal } = useModal();
+  const [errorVisible, setErrorVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const [inputs, setInputs] = useState<Inputs>({
     Date: "",
@@ -39,15 +45,22 @@ export const InterviewModal: React.FC<Props> = (props) => {
     Object.entries(inputs).forEach(([key, value]) => {
       formData.append(key, value);
     });
-
-    await createNewInterview(formData);
+    
+    try {
+      await createNewInterview(formData);
+      updateModal(false);
+    } catch (e) {
+      setErrorMessage(e instanceof Error ? e.message : "An unknown error occurred.");
+      setErrorVisible(true);
+    }
   }
 
   return (
     <div className='modal_wrapper'>
         <div className='modal_content'>
-            <CloseIcon className='close_button' onClick={() => props.updateModal(!props.toggleModal)}/>
+            <CloseIcon className='close_button' onClick={() => updateModal(false)}/>
             <h3>Schedule An Interview</h3>
+            <span className="error_message" style={{ display: errorVisible ? "block" : "none" }}><p>Error: {errorMessage}</p></span>
                 <form id='interview_form' onSubmit={handleSubmit}>
                 <div id='interview_row1'>
                   <input 

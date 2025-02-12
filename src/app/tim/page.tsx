@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import TimSkills from "../../../public/JSX/TimSkills.jsx"
-import './profile.modules.css'
+import TimSkills from "@/app/SVGs/TimSkills.svg"
+import '@/app/CSS/profile.modules.css'
 import '../welcome.modules.css'
 
 export default function TimProfile() {
@@ -9,13 +9,7 @@ export default function TimProfile() {
     <main className="text-[color:var(--primary-font)] font-Ununtu">
       <div id='section_1' className="section">
         <section className="center profile">
-          <Image
-            src="/Tim.jpg"
-            alt="Tim Profile Picture"
-            className="w-[20vw] border-[color:var(--primary-color)] m-[2vw] border-2 border-solid"
-            width={4480}
-            height={6720}
-          />
+        <img src="/Tim.jpg" alt="Tim" className="profile_picture" />
           <div>
             <h1 className='main_title'>About Tim</h1>
             <br></br>
@@ -32,9 +26,7 @@ export default function TimProfile() {
       </div>
       <div id='section_2' className="section odd_section">
       <section className="center">
-        <div>
-          <TimSkills></TimSkills>
-        </div>
+        <TimSkills className='skills'></TimSkills>
       </section>
     </div>
       {/* <div id='section_3' className="section">

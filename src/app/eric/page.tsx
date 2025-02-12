@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link.js";
-import EricSkills from "../../../public/JSX/EricSkills.jsx"
-import "./profile.modules.css"
+import EricSkills from "@/app/SVGs/EricSkills.svg"
+import '@/app/CSS/profile.modules.css'
 import "../welcome.modules.css"
 
 export default function EricProfile() {
@@ -9,7 +8,7 @@ export default function EricProfile() {
     <main className="text-[color:var(--primary-font)] font-Ununtu">
       <div id="section_1" className="section">
         <section className="center profile">
-          <Image src="/Eric.jpg" alt="Eric Profile Picture" className="w-[20vw] border-[color:var(--primary-color)] m-[2vw] border-2 border-solid" width={2208} height={2944}/>
+        <img src="/Eric.jpg" alt="Eric" className="profile_picture" />
           <div>
             <h1 className="main_title">About Eric</h1>
             <br></br>
@@ -27,9 +26,7 @@ export default function EricProfile() {
       </div>
       <div id="section_2" className="section odd_section">
       <section className="center">
-        <div>
-          <EricSkills></EricSkills>
-        </div>
+        <EricSkills className="skills"></EricSkills>
       </section>
     </div>
     </main>

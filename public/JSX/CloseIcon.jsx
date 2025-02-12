@@ -1,5 +1,5 @@
 import * as React from "react"
-import '/src/app/ui/footer.modules.css'
+import '/src/app/components/footer.modules.css'
 
 
 function CloseIcon(props) {

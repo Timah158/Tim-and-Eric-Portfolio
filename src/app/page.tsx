@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from 'next/link';
+import React from "react";
+import {Button} from "@nextui-org/react";
+import { useModal } from "@/app/context/modalContext";
 import './welcome.modules.css'
 
 export default function Home() {
+  const { toggleModal, updateModal } = useModal();
+
   return (
     <main className="text-[color:var(--primary-font)] font-Ununtu">
       <div id='section_1' className="section">
@@ -16,7 +23,7 @@ export default function Home() {
             </p>
           </div>
           <div id="main_title_buttons" className="text-center">
-            <button className='main_button'>Contact</button>
+            <Button className="main_button" onClick={() => updateModal(true)}>Contact</Button>
             <Link href="#section_3" className='main_button'>About</Link>
           </div>
         </section>
@@ -35,13 +42,7 @@ export default function Home() {
       </div>
       <div id='section_3' className="section">
         <section className="split">
-          <Image
-            src="/Tim.jpg"
-            alt="Tim Profile Picture"
-            className="w-[20vw] border-[color:var(--primary-color)] m-[2vw] border-2 border-solid"
-            width={4480}
-            height={6720}
-          />
+          <img src='/Tim.jpg' className="section_image" alt='Tim' />
           <div>
             <h3>About Tim</h3>
             <p>
@@ -76,13 +77,7 @@ export default function Home() {
               <li>MongoDB</li>
             </ul>
           </div>
-          <Image
-            src="/Eric.jpg"
-            alt="Eric Profile Picture"
-            className="w-[20vw] border-[color:var(--primary-color)] m-[2vw] border-2 border-solid"
-            width={2208}
-            height={2944}
-          />
+          <img src="/Eric.jpg" className="section_image" alt='Eric' />
         </section>
       </div>
     </main>
