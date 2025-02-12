@@ -10,8 +10,6 @@
   --error-color: #F55942;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Ubuntu&family=Work+Sans&display=swap');
 
 /* Box sizing rules */
@@ -22,7 +20,5 @@
 
 body {
   background-color: var(--bg-color);
-  /*font-family: 'Work Sans', sans-serif;
-  font-family: 'Silkscreen', cursive;*/
   font-family: 'Ubuntu', sans-serif;
 }
