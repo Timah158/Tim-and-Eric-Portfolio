@@ -29,7 +29,7 @@ export default function TimProfile() {
         <TimSkills className='skills'></TimSkills>
       </section>
     </div>
-      {/* <div id='section_3' className="section">
+      <div id='section_3' className="section">
         <section className="center profile">
           <div>
             <h3>Certifications</h3>
@@ -42,7 +42,7 @@ export default function TimProfile() {
           </div>
         </section>
       </div>
-      <div id='section_4' className="section odd_section">
+      {/* <div id='section_4' className="section odd_section">
         <section className="center profile">
           <div><h3>Projects</h3></div>
         </section>
