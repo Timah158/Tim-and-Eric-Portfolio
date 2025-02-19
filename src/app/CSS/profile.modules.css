@@ -73,6 +73,12 @@
   color: var(--selected_color);
 }
 
+.cert_wrapper {
+  display: flex;
+  column-gap: 1.5em;
+  padding: 1.5em 1.5em 0 1.5em;
+}
+
 @media screen and (max-width: 800px) {
   .projectTitle {
       font-size: 20px;
