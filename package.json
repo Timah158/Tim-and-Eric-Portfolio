@@ -13,6 +13,7 @@
     "@nextui-org/modal": "^2.0.28",
     "@nextui-org/react": "^2.2.9",
     "@vercel/postgres": "^0.9.0",
+    "axios": "^1.7.9",
     "next": "^15.1.6",
     "next-svgr": "^0.0.2",
     "react": "^18",
