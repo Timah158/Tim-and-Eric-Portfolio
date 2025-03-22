@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Ubuntu&family=Work+Sans&display=swap');
+
 :root {
   --bg-color: white;
   --primary-color: #4287f5;
@@ -9,8 +11,6 @@
   --odd_section_color: rgba(141, 181, 247, .2);
   --error-color: #F55942;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Ubuntu&family=Work+Sans&display=swap');
 
 /* Box sizing rules */
 * {

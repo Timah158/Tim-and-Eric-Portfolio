@@ -50,9 +50,9 @@ function MobileNavbar() {
   return (
     <div className='mobile_navbar'>
       <nav className="mobile_navbar">
-        <a href="/" className='mobile_navbar_logo_link'>
+        <Link href="/" className='mobile_navbar_logo_link'>
           <MobileLogo className='mobile_navbar_logo' />
-        </a>
+        </Link>
         <button className='menu_icon'>
           <MenuIcon onClick={() => setShowDropdown(!showDropdown)} />
         </button>
