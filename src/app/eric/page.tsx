@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from 'axios';
 import { useModal } from "@/app/context/modalContext";
 import EricSkills from "@/app/SVGs/EricSkills.svg"
+//import GitHub from 'github-api';
 import '@/app/CSS/profile.modules.css'
 import "../welcome.modules.css"
 

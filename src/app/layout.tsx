@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from '@/app/components/navbar'
 import Footer from '@/app/components/footer'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ModalProvider } from "@/app/context/modalContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,14 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ModalProvider>
-          <Navbar></Navbar>
-          {children}
-          <Footer></Footer>
-        </ModalProvider>
-      </body>
-    </html>
+    <>
+      <SpeedInsights/>
+      <html lang="en">
+        <body className={inter.className}>
+          <ModalProvider>
+            <Navbar></Navbar>
+            {children}
+            <Footer></Footer>
+          </ModalProvider>
+        </body>
+      </html>
+    </>
   );
 }
