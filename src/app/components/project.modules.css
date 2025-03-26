@@ -1,0 +1,63 @@
+
+.projectContentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.projectContentContainer::-webkit-scrollbar {
+    width: .5em;
+}
+
+.projectContentContainer::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+.projectContentContainer::-webkit-scrollbar-thumb {
+    background: var(--footer-background-color);
+    border-radius: 1em;
+}
+
+.projectTitleContainer {
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.projectBodyContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 2em;
+}
+
+.profileContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.profileContainer > h4 {
+    color: var(--primary-color);
+}
+
+.projectImage {
+    margin: auto;
+    max-width: 50%;
+    object-fit: cover;
+    border-style: solid;
+    border-width: .5em;
+    border-color: var(--primary-color);
+    border-radius: 2em;
+}
+
+.projectSectionTitle {
+    text-align: center;
+    color: var(--primary-color);
+}
