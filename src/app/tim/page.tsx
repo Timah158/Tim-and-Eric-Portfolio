@@ -88,13 +88,6 @@ export default function TimProfile() {
           </div>
         </section>
       </div>
-      <div id='section_4' className="section odd_section">
-        <section className="center profile">
-          <div>
-            <ProfileCarousel/>
-          </div>
-        </section>
-      </div>
     </main>
   )
 }
