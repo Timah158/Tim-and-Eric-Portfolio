@@ -4,6 +4,7 @@ import TimSkills from "@/app/SVGs/TimSkills.svg"
 import { useState } from "react";
 import axios from 'axios';
 import { useModal } from "@/app/context/modalContext";
+import ProfileCarousel from "@/app/components/ProfileCarousel"
 //import GitHub from 'github-api';
 import '@/app/CSS/profile.modules.css'
 import '../welcome.modules.css'
@@ -87,11 +88,13 @@ export default function TimProfile() {
           </div>
         </section>
       </div>
-      {/* <div id='section_4' className="section odd_section">
+      <div id='section_4' className="section odd_section">
         <section className="center profile">
-          <div><h3>Projects</h3></div>
+          <div>
+            <ProfileCarousel/>
+          </div>
         </section>
-      </div> */}
+      </div>
     </main>
   )
 }

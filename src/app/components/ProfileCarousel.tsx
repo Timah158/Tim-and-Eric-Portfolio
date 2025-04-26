@@ -1,70 +1,64 @@
-// import React,{ useState, useEffect } from 'react';
-// import { Amplify } from 'aws-amplify';
-// import config from './aws-exports.js';
-// import { generateClient } from "aws-amplify/api";
-// import { createProject } from './graphql/mutations';
+import React, { useState, useEffect } from 'react';
+import { Button } from "@nextui-org/react";
 
-// Amplify.configure(config);
-// const client = generateClient()
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+}
 
-// function ProfileCarousel({props}) {
-//   const [Page, setPage] = useState(0);
-//   function updatePage (num) {
-//     if (num === 1) {
-//       setPage(Page + 1)
-//     }
-//     else if (num === -1) {
-//       setPage(Page - 1)
-//     }
-//   }
+interface ProfileCarouselProps {}
 
-//   const [projects, setProjects] = useState([]);
-//   useEffect(() => { fetchProjects(Page) });
+const ProfileCarousel: React.FC<ProfileCarouselProps> = () => {
+  const [page, setPage] = useState<number>(0);
+  const [projects, setProjects] = useState<Project[]>([]);
 
-//   async function fetchProjects(newPage) {
-//     const apiData = await DataStore.query(Project, c => c.createdBy.eq(props.user), {
-//       sort: s => s.createdOn("DESCENDING"),
-//       page: newPage,
-//       limit: 3
-//     });
-//     const projectsFromAPI = apiData;
-//     setProjects(projectsFromAPI);
-//   }
+  const updatePage = (num: number) => {
+    setPage(prev => prev + num);
+  };
 
-//   function showProject(project) {
-//     props.props.setProjectModal(true);
-//     props.props.setNavigation({
-//       modal: {
-//         element: "projectModal"
-//       }});
-//   }
+  useEffect(() => {
+    // Replace this mock data with your real data fetching logic
+    const mockProjects: Project[] = [
+      { id: '1', title: 'Project One', description: 'Description one' },
+      { id: '2', title: 'Project Two', description: 'Description two' },
+      { id: '3', title: 'Project Three', description: 'Description three' },
+      { id: '4', title: 'Project Four', description: 'Description four' },
+      { id: '5', title: 'Project Five', description: 'Description five' },
+      { id: '6', title: 'Project Six', description: 'Description six' },
+    ];
 
-//     return (
-//       <div id='section_3' className="section">
-//         <section className="projectSection">
-//           <div id="carouselWrapper">
-//             <h3>Projects</h3>
-//             <div className="projectsCarousel">
-//               {projects.map((project) => (
-//               <div
-//               className="carouselElement"
-//               key={project.id}
-//               onClick={() => showProject(project)}
-//               >
-//                 <div className="projectTitle">{project.title}</div>
-//                 <div className="projectDescription">{project.description}</div>
-//               </div>))}
-//             </div>
-//             <div className="carouselPagination">
-//               <button className="carouselButton" onClick={()=> updatePage(-1)}>&#60;</button>
-//               <button className="carouselButton" onClick={()=> setPage(0)}>1</button>
-//               <button className="carouselButton" onClick={()=> setPage(1)}>2</button>
-//               <button className="carouselButton" onClick={()=> updatePage(1)}>&#62;</button>
-//             </div>
-//           </div>
-//         </section>
-//       </div>
-//     );
-//   }
+    const start = page * 3;
+    const end = start + 3;
+    setProjects(mockProjects.slice(start, end));
+  }, [page]);
 
-//   export default ProfileCarousel;
+  return (
+    <div id='section_3' className="section">
+      <section className="projectSection">
+        <div id="carouselWrapper">
+          <h3>Projects</h3>
+          <div className="projectsCarousel">
+            {projects.map((project) => (
+              <div
+                className="carouselElement"
+                key={project.id}
+              >
+                <div className="projectTitle">{project.title}</div>
+                <div className="projectDescription">{project.description}</div>
+              </div>
+            ))}
+          </div>
+          <div className="carouselPagination">
+            <Button className="carouselButton" onClick={() => updatePage(-1)}>&#60;</Button>
+            <Button className="carouselButton" onClick={() => setPage(0)}>1</Button>
+            <Button className="carouselButton" onClick={() => setPage(1)}>2</Button>
+            <Button className="carouselButton" onClick={() => updatePage(1)}>&#62;</Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ProfileCarousel;
