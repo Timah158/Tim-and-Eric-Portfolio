@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    webpack(config) {
+    turbopack(config) {
         config.module.rules.push({
           test: /\.svg$/,
-          use: ["@svgr/webpack"],
+          use: ["@svgr/turbopack"],
         });
     
         return config;
