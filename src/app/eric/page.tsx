@@ -7,6 +7,7 @@ import EricSkills from "@/app/SVGs/EricSkills.svg"
 //import GitHub from 'github-api';
 import '@/app/CSS/profile.modules.css'
 import "../welcome.modules.css"
+import Image from "next/image";
 
 export default function EricProfile() {
   const { toggleModal, updateModal } = useModal();
@@ -61,7 +62,7 @@ export default function EricProfile() {
       </div>
       <div id="section_2" className="section odd_section">
       <section className="center">
-        <EricSkills className="skills"></EricSkills>
+        <Image src={EricSkills} alt="eric-skills" className="skills"></Image>
       </section>
     </div>
     </main>

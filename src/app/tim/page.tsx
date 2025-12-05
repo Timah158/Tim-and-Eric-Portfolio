@@ -8,6 +8,7 @@ import ProfileCarousel from "@/app/components/ProfileCarousel"
 //import GitHub from 'github-api';
 import '@/app/CSS/profile.modules.css'
 import '../welcome.modules.css'
+import Image from "next/image";
 
 export default function TimProfile() {
   const { toggleModal, updateModal } = useModal();
@@ -63,7 +64,7 @@ export default function TimProfile() {
       </div>
       <div id='section_2' className="section odd_section">
       <section className="center">
-        <TimSkills className='skills'></TimSkills>
+        <Image src={TimSkills} alt="tim-skills" className='skills'></Image>
       </section>
     </div>
       <div id='section_3' className="section">
