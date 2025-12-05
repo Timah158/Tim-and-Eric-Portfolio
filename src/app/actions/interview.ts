@@ -12,8 +12,8 @@ export async function createNewInterview(formData: FormData) {
   const About = formData.get("About") as string;
 
   
-  await sql(
+  await sql
     `INSERT INTO public."Interviews" (id, "Date", "Time", "Person", "Email", "Phone", "About") VALUES (gen_random_uuid(), $1, $2, $3, $4, $5, $6)`,
     [Date, Time, Person, Email, Phone, About]
-  );
+  ;
 }
