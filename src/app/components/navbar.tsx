@@ -9,8 +9,9 @@ import './navbar.modules.css'
 import './interview.modules.css'
 import { InterviewModal } from "./interviewModal"
 import React from "react";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { useModal } from "@/app/context/modalContext";
+import Image from "next/image";
 
 function DesktopNavbar() {
   const { updateModal } = useModal();
@@ -25,7 +26,7 @@ function DesktopNavbar() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-          {isHovered ? <HoveredLogo className="navbar_logo"></HoveredLogo> : <DefaultLogo className="navbar_logo"></DefaultLogo>}
+          {isHovered ? <Image src={HoveredLogo} alt="hovered-logo" className="navbar_logo"></Image> : <Image src={DefaultLogo} alt="default-logo" className="navbar_logo"></Image>}
         </Link>
         <ul className="navlist">
           <li className="navlink">
@@ -51,10 +52,12 @@ function MobileNavbar() {
     <div className='mobile_navbar'>
       <nav className="mobile_navbar">
         <Link href="/" className='mobile_navbar_logo_link'>
-          <MobileLogo className='mobile_navbar_logo' />
+          {/* <MobileLogo className='mobile_navbar_logo' /> */}
+          <Image src={MobileLogo} alt="mobile-logo" className="mobile_navbar_logo"/>
         </Link>
         <button className='menu_icon'>
-          <MenuIcon onClick={() => setShowDropdown(!showDropdown)} />
+          {/* <MenuIcon onClick={() => setShowDropdown(!showDropdown)} /> */}
+          <Image src={MenuIcon} alt="menu-icon" onClick={() => setShowDropdown(!showDropdown)} />
         </button>
         {showDropdown && <MobileDropdown setShowDropdown={setShowDropdown}/>}
       </nav>
