@@ -34,6 +34,7 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "svgo": "4.0.0"
+    "svgo": "4.0.0",
+    "axios": "^1.13.5"
   }
 }
